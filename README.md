@@ -52,8 +52,7 @@
 
 # Validar perfomance S.O
     sar 
-
-===================================
+    
 # Instalação do Docker
     yum remove docker \
                       docker-client \
@@ -79,7 +78,6 @@
 
     systemctl status docker
 
-===================================
 # Instalacao Docker Compose
     curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
@@ -89,7 +87,6 @@
         -o /etc/bash_completion.d/docker-compose
     bash
 
-==================================
 # REGRAS DE FIREWALL DOCKER
     firewall-cmd --permanent --add-masquerade 
     firewall-cmd --permanent --add-port=2376/tcp
@@ -103,7 +100,6 @@
     firewall-cmd --permanent --add-port=10050/tcp
     firewall-cmd --reload
 
-====================================
 # INICIAR CLUSTER DOCKER
     docker swarm init
     docker node ls
