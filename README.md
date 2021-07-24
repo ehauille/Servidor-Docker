@@ -78,7 +78,7 @@
 
     systemctl status docker
 
-# Instalacao Docker Compose
+# Instalação Docker Compose
     curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     docker-compose --version
@@ -87,7 +87,7 @@
         -o /etc/bash_completion.d/docker-compose
     bash
 
-# REGRAS DE FIREWALL DOCKER
+# Regras do firewall
     firewall-cmd --permanent --add-masquerade 
     firewall-cmd --permanent --add-port=2376/tcp
     firewall-cmd --permanent --add-port=2377/tcp
@@ -100,7 +100,7 @@
     firewall-cmd --permanent --add-port=10050/tcp
     firewall-cmd --reload
 
-# INICIAR CLUSTER DOCKER
+# Iniciar Docker Compose
     docker swarm init
     docker node ls
 
