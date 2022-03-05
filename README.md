@@ -1,4 +1,4 @@
-# Configuração do sevidor em CentOS 8 para Zabbix:
+# Configuração do sevidor Docker em CentOS 8:
 
 # Instalar atualizações
     yum update -y
@@ -89,13 +89,6 @@
 
 # Regras do firewall
     firewall-cmd --permanent --add-masquerade 
-    firewall-cmd --permanent --add-port=2376/tcp
-    firewall-cmd --permanent --add-port=2377/tcp
-    firewall-cmd --permanent --add-port=7946/tcp
-    firewall-cmd --permanent --add-port=7946/udp
-    firewall-cmd --permanent --add-port=4789/udp
-    firewall-cmd --permanent --add-port=80/tcp
-    firewall-cmd --permanent --add-port=443/tcp
     firewall-cmd --permanent --add-port=10051/tcp
     firewall-cmd --permanent --add-port=10050/tcp
     firewall-cmd --reload
